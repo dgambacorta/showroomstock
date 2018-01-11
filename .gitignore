@@ -1,0 +1,4 @@
+*.pyc
+.env/
+static/bower_components/
+.env/include/python2.7
