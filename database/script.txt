@@ -1,0 +1,46 @@
+CREATE TABLE IF NOT EXISTS 	category	 (
+  	id	 INTEGER PRIMARY KEY AUTOINCREMENT,
+  	category	 text NOT NULL,
+  	status	 int NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS  client  (
+    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    name   text NOT NULL,
+    mail     text NOT NULL,
+    cellphone     text NOT NULL,
+    birthday   date NOT NULL,
+    dni  text NOT NULL,
+      	status	 int NOT NULL
+  );
+
+  CREATE TABLE IF NOT EXISTS 	product	 (
+    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+  	category	 int NOT NULL,
+  	name	 text NOT NULL,
+  	stock	 int NOT NULL,
+  	input_date	 date NOT NULL,
+  	buy_price	 float NOT NULL,
+  	sale_price	 float NOT NULL,
+  	photo	 text NOT NULL,
+     	status	 int NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS 	user	 (
+    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+  	name	 text NOT NULL,
+  	lastname	 text NOT NULL,
+  	mail	 text NOT NULL,
+  	pass	 text NOT NULL,
+  	profile	 int NOT NULL,
+  	status	 int NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS  sale    (
+    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    productId    int NOT NULL,
+    quantity    int NOT NULL,
+    sale_date date not null,
+    total float not null,
+    status	 int NOT NULL
+);

@@ -1,0 +1,119 @@
+<!-- graficos -->
+<div class="row">
+
+	<div class="col-lg-4">
+		<div class="card-box">
+			<h4 class="header-title m-t-0 m-b-30">
+				Total Records
+			</h4>
+
+			<div class="widget-chart text-center">
+			<div class="legend"><div > </div><table style="position:relative;top:-16px;right:1px; margin-left:50%; font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #00b19d;overflow:hidden"></div></div></td><td class="legendLabel">Records&nbsp;&nbsp;</td><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #3bafda;overflow:hidden"></div></div></td><td class="legendLabel">Backups&nbsp;&nbsp;</td></tr></tbody></table></div>
+
+				<div id="chart_total_records">
+					
+
+				</div>
+
+			
+				<ul class="list-inline m-t-15 mb-0">
+					<li>
+						<h5 class="text-muted m-t-20">Today</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.totals_today.records}}</h4>
+					</li>
+					<li>
+						<h5 class="text-muted m-t-20">Last week</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.totals_last_week.records}}</h4>
+					</li>
+					<li>
+						<h5 class="text-muted m-t-20">Last Month</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.totals_last_month.records}}</h4>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-4">
+		<div class="card-box">
+			<h4 class="header-title m-t-0 m-b-30">
+				Elapsed Time
+			</h4>
+			<div class="widget-chart text-center">
+					<div class="legend"><div > </div><table style="position:relative;top:-16px;right:1px; margin-left:70%; font-size:smaller;color:#3bafda"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #3bafda;overflow:hidden"></div></div></td><td class="legendLabel">Elapsed Time&nbsp;&nbsp;</td></tr></tbody></table></div>
+				<div id="chart_elapsed_time"></div>
+				<ul class="list-inline m-t-15 mb-0">
+					<li>
+						<h5 class="text-muted m-t-20">Today</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.totals_today.elapsed_time}} ms</h4>
+					</li>
+					<li>
+						<h5 class="text-muted m-t-20">Last week</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.totals_last_week.elapsed_time}} ms </h4>
+					</li>
+					<li>
+						<h5 class="text-muted m-t-20">Last Month</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.totals_last_month.elapsed_time}} ms</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-4">
+		<div class="card-box">
+			<h4 class="header-title m-t-0 m-b-30">
+				Disk Space
+			</h4>
+			<div class="widget-chart text-center">
+						<div class="legend"><div > </div><table style="position:relative;top:-16px;right:1px; margin-left:50%; font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #DCDCDC;overflow:hidden"></div></div></td><td class="legendLabel">Free&nbsp;&nbsp;</td><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #3bafda;overflow:hidden"></div></div></td><td class="legendLabel">Used&nbsp;&nbsp;</td></tr></tbody></table></div>
+
+				<div id="chart_disk_apsce"></div>
+
+
+
+				<ul class="list-inline m-t-15 mb-0">
+					<li>
+						<h5 class="text-muted m-t-20">Total</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.storage.Storage.total | bytes}}</h4>
+					</li>
+					<li>
+						<h5 class="text-muted m-t-20">Used</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.storage.Storage.used | bytes}}</h4>
+					</li>
+					<li>
+						<h5 class="text-muted m-t-20">Free</h5>
+						<h4 class="m-b-0">{{dashboard.dashboard_service.data.storage.Storage.free | bytes}}</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!--
+	   <div class="col-lg-12">
+                                <div class="portlet">
+                                    <div class="portlet-heading">
+                                        <h3 class="portlet-title text-dark">
+                                            Realtime Records
+                                        </h3>
+                                        <div class="portlet-widgets">
+                                            <a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
+                                            <span class="divider"></span>
+                                            <a data-toggle="collapse" data-parent="#accordion1" href="#portlet2"><i class="ion-minus-round"></i></a>
+                                            <span class="divider"></span>
+                                            <a href="#" data-toggle="remove"><i class="ion-close-round"></i></a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div id="portlet2" class="panel-collapse collapse show">
+                                        <div class="portlet-body">
+                                            <div id="flotRealTime" style="height: 320px;" class="flot-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+
+</div>

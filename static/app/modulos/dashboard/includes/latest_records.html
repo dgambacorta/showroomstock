@@ -1,0 +1,75 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="card-box" style="min-height:630px !important;">
+			<h4 class="header-title m-t-0">Sales</h4>
+			<p class="text-muted m-b-25 font-13"></p>
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Sale Date</th>
+						<th>Product</th>
+						<th>Quantity</th>
+						<th>Total</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+				<tbody>					
+					<tr ng-repeat="model in dashboard.dashboard_service.data.sales | orderBy:'order':false track by $index">
+						<td style="text-align:right;">#{{model.order}}</td>
+						<td>{{model.sale_date | date:'yyyy/MM/dd' }}</td>
+						<td>{{model.product}}</td>
+						<td>{{model.quantity}}</td>
+						<td>{{model.total}}</td>
+						<td>{{model.type}}</td>
+					 </tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+
+
+
+	<div class="row">
+	<div class="col-lg-12">
+		<div class="card-box" style="height:630px !important;">
+			<h4 class="header-title m-t-0">Products</h4>
+			<p class="text-muted m-b-25 font-13"></p>
+			<table class="table  table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Input Date</th>
+						<th>Name</th>
+						<th>Category</th>
+						<th>Stock</th>
+						<th>Stock Limit</th>
+						<th>Buy Price</th>
+						<th>Sale Price</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="model in dashboard.dashboard_service.data.products | orderBy:'order':false  track by $index">
+						<td style="text-align:right;">#{{model.order}}</td>
+						<td>{{model.creation_date | date:'yyyy/MM/dd hh:mm:ss' }}</td>
+						<td>{{model.companyName}}</td>
+						<td>{{model.storeName}}</td>
+						<td>{{model.printerId}}</td>
+						<td>{{model["@rec_num"]}}</td>
+						<td><span class="badge {{model['@rec_type']}}">{{model.rec_type}}</span></td>
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+                       
+
+
+
+</div>
+

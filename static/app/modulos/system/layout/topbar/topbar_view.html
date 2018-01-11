@@ -1,0 +1,32 @@
+<div class="topbar" ng-controller="topbar_controller as ctr">
+
+	<div class="topbar-left">
+		<div class="text-center">
+			<a href="#user" class="logo">
+				<i class=" mdi mdi-wrench "></i> 
+				<span>Epson Manager</span></a>
+			<!-- <a href="#commandRunner" class="logo"> -->
+				<!-- <i class="mdi mdi-settings" style="font-size: 20px;"></i> -->
+				<!-- <span style="font-size: 10px;">Epson Manager</span>	 -->
+			<!-- </a> -->
+		</div>
+	</div>
+
+	<nav class="navbar-custom">
+		 
+		 <ng-include src="'./app/modulos/system/layout/topbar/connection/connection_view.html'"></ng-include>
+
+		<ul class="list-inline menu-left mb-0">
+			
+			<li class="float-left d-block d-sm-none">
+				<button class="button-menu-mobile open-left waves-light waves-effect" >
+					<i class="mdi mdi-menu"></i>
+				</button>				
+			</li>
+
+			<li class="hide-phone app-search"></li>
+
+		</ul>
+	</nav>
+
+</div>

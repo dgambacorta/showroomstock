@@ -1,0 +1,25 @@
+<ul class="list-inline float-right mb-0"  ng-controller="connection_controller as ctr">
+	<li class="list-inline-item notification-list hide-phone" style="vertical-align: middle; text-align: right;">
+		
+		<span class="m-b-20 font-14 text-white" ng-show="ctr.connection_service.data.isConnected == true">
+			Connected to {{ctr.connection_service.data.host}}:{{ctr.connection_service.data.port}}<br>
+			Api {{ctr.connection_service.data.version}}<br> 
+			Status {{ctr.connection_service.data.status}}
+		</span>
+		
+		<span class="m-b-20 font-14 text-white" ng-show="ctr.connection_service.data.isConnected == false">
+			disconnected
+		</span>
+
+	</li>
+
+	<li class="list-inline-item notification-list hide-phone">
+		<a class="nav-link waves-light waves-effect" href="#settings" id="btn-settings">
+			<i class="mdi mdi-power-settings noti-icon" 
+				ng-class="ctr.connection_service.data.isConnected == true ? 'text-success' : 'text-danger'" 
+				style="font-size:2em;">
+			</i>
+		</a>
+	</li>
+	
+</ul>

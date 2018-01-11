@@ -1,0 +1,23 @@
+curl -H "Content-Type: application/json" -X POST -d '{"category":"Nueva","status":1}' http://169.254.254.20:5001/category/create
+
+curl -H "Content-Type: application/json" -X POST -d '{"name":"Damian Gambacorta","mail":"damiangambacorta@gmail.com","cellphone":"15554094423","birthday":"02/11/1989","dni":34848557}' http://169.254.254.20:5001/client/create
+
+curl -H "Content-Type: application/json" -X POST -d '{"category" : 1, "name" : "Prodcuto 1", "stock" : 2, "stock_limit" : 2, "input_date" : "03/11/2018", "buy_price" : 458, "sale_price" : 60, "photo" : "url"}' http://169.254.254.20:5001/product/create
+
+curl -H "Content-Type: application/json" -X POST -d '{"productId":"1","quantity":"3","sale_date":"01/01/2001","total":54.36}' http://169.254.254.20:5001/sale/create
+
+curl -H "Content-Type: application/json" -X POST -d '{"name" : "Damian","lastname" : "Gambacortas","mail" : "asasasa@asas.com","password" : "1212121","profile" : 21}' http://169.254.254.20:5001/user/create
+
+        
+#update
+        
+
+curl -H "Content-Type: application/json" -X POST -d '{"category":"Nuevsa","status":3}' http://169.254.254.20:5001/category/update/1
+
+curl -H "Content-Type: application/json" -X POST -d '{"name":"Damianz Gambacortaz","mail":"damiangambacorta@gmail.comz","cellphone":"155540944239","birthday":"02/11/1989","dni":348485579}' http://169.254.254.20:5001/client/update/6
+
+curl -H "Content-Type: application/json" -X POST -d '{"category" : 1, "name" : "Prodcut22o 1", "stock" : 222, "input_date" : "22/11/2018", "buy_price" : 2, "sale_price" : 1, "photo" : "url"}' http://169.254.254.20:5001/product/create/1
+
+curl -H "Content-Type: application/json" -X POST -d '{"productId":"133333","quantity":"3333333","sale_date":"01/01/2001","total":3354.36}' http://169.254.254.20:5001/sale/update/1
+
+curl -H "Content-Type: application/json" -X POST -d '{"name" : "Damian","lastname" : "Gambacortas","mail" : "asasasa@asas.com","password" : "1212121","profile" : 21}' http://169.254.254.20:5001/user/update/1
