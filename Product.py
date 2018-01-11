@@ -52,7 +52,7 @@ class Product:
         return result
 
     def getAll(self):
-        query = """ select category, name, stock, input_date, buy_price, sale_price, photo, stock_limit from product """
+        query = """ select c.category, name, stock, input_date, buy_price, sale_price, photo, stock_limit from product p join category c on p.category=c.id """
         result = self.db.query_db(query, [])
         return result  
 

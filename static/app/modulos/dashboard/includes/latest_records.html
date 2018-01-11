@@ -54,12 +54,14 @@
 				<tbody>
 					<tr ng-repeat="model in dashboard.dashboard_service.data.products | orderBy:'order':false  track by $index">
 						<td style="text-align:right;">#{{model.order}}</td>
-						<td>{{model.creation_date | date:'yyyy/MM/dd hh:mm:ss' }}</td>
-						<td>{{model.companyName}}</td>
-						<td>{{model.storeName}}</td>
-						<td>{{model.printerId}}</td>
-						<td>{{model["@rec_num"]}}</td>
-						<td><span class="badge {{model['@rec_type']}}">{{model.rec_type}}</span></td>
+						<td>{{model.input_date | date:'yyyy/MM/dd hh:mm:ss' }}</td>
+						<td>{{model.name}}</td>
+						<td>{{model.category}}</td>
+						<td>{{model.stock}}</td>
+						<td>{{model.stock_limit}}</td>
+						<td>${{model.buy_price}}</td>
+						<td>${{model.sale_price}}</td>
+						<!-- <td><span class="badge {{model['@rec_type']}}">{{model.rec_type}}</span></td> -->
 						
 					</tr>
 				</tbody>
