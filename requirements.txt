@@ -9,7 +9,7 @@ Flask-Spyne==0.3.1
 idna==2.6
 itsdangerous==0.24
 Jinja2==2.9.6
-lxml==3.8.0
+lxml==4.6.2
 MarkupSafe==1.0
 pathtools==0.1.2
 pudb==2017.1.3
